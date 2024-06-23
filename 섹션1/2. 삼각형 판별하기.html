@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let largest = a;
+                let sumSmallLines = b+c;
+                if (largest < b) {
+                    largest = b;
+                    sumSmallLines = a+c;
+                }
+                
+                if (largest < c) {
+                    largest = c;
+                    sumSmallLines = a+b;
+                } 
+
+                return sumSmallLines < largest ? "NO" : "YES";
+            }
+
+            console.log(solution(13, 33, 17));
+        </script>
+    </body>
+</html>
