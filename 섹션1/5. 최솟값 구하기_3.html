@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arrString){
+                const arr = arrString.split(' ').map(Number);
+                // return Math.min(...arr);
+                return Math.min.apply(null,arr);
+                
+            }
+            console.log(solution('5 3 7 11 2 15 17'));
+        </script>
+    </body>
+</html>

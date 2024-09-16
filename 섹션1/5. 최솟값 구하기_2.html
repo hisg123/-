@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arrString){
+                const arr = arrString.split(' ').map(Number);
+                return arr.reduce((acc, cur) => {
+                    if (cur < acc) {
+                        acc = cur;
+                    };
+                    return acc;
+                });
+            }
+            console.log(solution('5 3 7 11 2 15 17'));
+        </script>
+    </body>
+</html>
