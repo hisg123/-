@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(arrString) {
+            const arr = arrString.split(' ').map(Number);
+            
+            let oddMin = Number.MAX_SAFE_INTEGER;
+            let oddSum = 0;
+
+            for (const a of arr) {
+                if (a % 2 !== 0) {
+                    if (a < oddMin) {
+                        oddMin = a;
+                    }
+                    oddSum += a;
+                }
+            }
+            return `${oddMin}\n${oddSum}`
+        }
+        console.log(solution('12 77 38 41 53 92 85'));
+    </script>
+</body>
+
+</html>
