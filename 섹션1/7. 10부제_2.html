@@ -1,0 +1,29 @@
+<html></html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(arrString) {
+            const [dateStr, carArrStr] = arrString.split('\n');
+            const carArr = carArrStr.split(' ');
+            
+            let count = 0;
+
+            for (const ca of carArr) {
+                if (ca%10 === Number(dateStr)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        
+        console.log(solution('0\n12 20 54 30 87 91 30'));
+
+    </script>
+</body>
+
+</html>
