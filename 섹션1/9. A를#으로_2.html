@@ -1,0 +1,19 @@
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            const arr = [...str];
+            let answer = '';
+            for (const element of arr) {
+                answer += element === 'A' ? '#' : element;
+            }
+            return answer;
+        }
+        console.log(solution('BANANA'));
+    </script>
+</body>
+</html>
