@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(arrString) {
+            // #1
+            // Arr sum - 100을 해 = target => O(N)  
+            // for 문을 돌려서 두개 합이 target인 경우 찾아 => O(N^2)
+            const arr = arrString.split(' ').map(Number);
+
+            const target = arr.reduce((acc, cur) => {
+                acc += cur;
+                return acc;
+            }, 0) - 100;
+
+            let notMemebers = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                let subtractedTarget = target - arr[i];
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (subtractedTarget - arr[j] === 0) {
+                        notMemebers = [arr[i], arr[j]];
+                        break;
+                    }
+                }
+            }
+
+            const realMembers = arr.filter(element => {
+                if (notMemebers.indexOf(element) === -1) {
+                    return element;
+                }
+            });
+
+            return realMembers.join(' ');
+        }
+        console.log(solution('20 7 23 19 10 15 25 8 13'));
+    </script>
+</body>
+
+</html>
