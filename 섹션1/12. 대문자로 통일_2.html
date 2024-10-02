@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = '';
+            for (const s of str) {
+                let num = s.charCodeAt();
+                if (num >= 97 && num <= 122) answer += String.fromCharCode(num - 32);
+                else answer += s;
+            }
+            return answer;
+        }
+        console.log(solution('ItIsTimeToStudy'));
+    </script>
+</body>
+
+</html>
