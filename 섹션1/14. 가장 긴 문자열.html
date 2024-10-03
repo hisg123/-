@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const strArr = str.split('\n');
+            const number = Number(strArr.shift());
+
+            let maxLength = 0;
+            let answer = '';
+            for (let i = 0; i < number; i++) {
+                if(maxLength < strArr[i].length) {
+                    maxLength = strArr[i].length;
+                    answer = strArr[i];
+                }
+            }
+
+            return answer;
+        }
+        console.log(solution('5\nteacher\ntime\nstudent\nbeautiful\ngood'));
+    </script>
+</body>
+
+</html>
