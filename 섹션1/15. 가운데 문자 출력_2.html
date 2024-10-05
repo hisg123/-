@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const strLen = str.length;
+            let mid = Math.floor(strLen/2);
+            let answer = '';
+
+            if (strLen % 2 === 0) {
+                answer = str.substr(mid-1, 2);
+            } else {
+                answer = str.substr(mid, 1);
+            }
+            return answer;
+        }
+        console.log(solution('study'));
+    </script>
+</body>
+
+</html>

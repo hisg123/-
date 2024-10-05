@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const answerArr = [];
+            for (const s of str) {
+                if (answerArr.indexOf(s) === -1) {
+                    answerArr.push(s);
+                }
+            }
+
+            return answerArr.join('');
+        }
+        console.log(solution('ksekkset'));
+    </script>
+</body>
+
+</html>
