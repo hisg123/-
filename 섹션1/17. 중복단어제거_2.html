@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const arr = str.split('\n');
+            const n = Number(arr.shift());
+
+            const answerArr = arr.filter((v, i) => {
+                if (arr.indexOf(v) === i) return true;
+            })
+
+            return answerArr.join('\n');
+        }
+        console.log(solution('5\ngood\ntime\ngood\ntime\nstudent'));
+    </script>
+</body>
+
+</html>
