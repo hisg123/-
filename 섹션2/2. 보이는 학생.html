@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const [n, strArr] = str.split('\n');
+            const arr = strArr.split(' ').map(Number);
+
+            let cnt = 1;
+            let cmp = arr[0];
+
+            for (let i = 1; i < arr.length; i++) {
+                if(cmp < arr[i]) {
+                    cnt+=1;
+                    cmp = arr[i];
+                }
+            }
+
+            return cnt;
+        }
+        console.log(solution('8\n130 135 148 140 145 150 150 153'));
+    </script>
+</body>
+
+</html>
