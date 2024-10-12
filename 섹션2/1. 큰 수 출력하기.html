@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const [n, strArr] = str.split('\n');
+            const arr = strArr.split(' ').map(Number);
+
+            const answerArr = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (i === 0) {
+                    answerArr.push(arr[i]);
+                } else if (arr[i-1] < arr[i]) {
+                    answerArr.push(arr[i]);
+                }
+            }
+
+            return answerArr.join(' ');
+        }
+        console.log(solution('6\n7 3 9 5 6 12'));
+    </script>
+</body>
+
+</html>
