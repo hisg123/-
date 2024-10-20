@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            const [n, arrStr] = str.split('\n');
+            const arr = arrStr.split(' ').map(Number);
+
+            let score = 0;
+            let oneCnt = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === 1) {
+                    oneCnt++;
+                    score += oneCnt;
+
+                } else {
+                    oneCnt = 0;
+                }
+                console.log(score);
+            }
+            return score;
+        }
+        console.log(solution('10\n1 0 1 1 1 0 0 1 1 0'));
+    </script>
+</body>
+
+</html>
