@@ -1,0 +1,20 @@
+<html lang="en">
+
+<body>
+    <script>
+        function solution(n, arr) {
+            const sortedArr = [...arr].sort((a, b) => b - a);
+            const answer = [];
+
+            arr.forEach(element => {
+                answer.push(sortedArr.indexOf(element)+1);
+            });
+
+            return answer.join(' ');
+        }
+
+        console.log(solution(5, [87, 89, 92, 100, 76]));
+    </script>
+</body>
+
+</html>
